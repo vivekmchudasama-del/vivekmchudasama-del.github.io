@@ -82,36 +82,51 @@
   const profileData = {
     name: "Vivek M. Chudasama",
     title: "Senior ServiceNow Developer",
-    location: "Bangalore, India",
+    location: "Gandhinagar, Gujarat, India",
     phone: "+91 94294 89811",
     email: "vivek.m.chudasama@gmail.com", // (From resume). Change if you prefer another.
     openTo: "Open to relocation or remote roles in Canada, UAE, and Australia.",
 
     headline:
-      "Experienced and certified ServiceNow Developer with 8+ years of expertise across ITSM and CSM. Proven track record in scalable solutions, Virtual Agent, AI Search, NLU Workbench, and integrations (Microsoft Teams, Azure Translation, SAML). Strong Agile delivery and global client collaboration.",
+      "Helping teams resolve faster with ServiceNow automation, AI-enabled self‑service, and integrations.",
 
     links: [
       // Replace # with your real profiles
-      { label: "LinkedIn", url: "#" },
-      { label: "GitHub", url: "#" },
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/vivek-chudasama-143b9170/" },
+      { label: "GitHub", url: "https://vivekmchudasama-del.github.io/" },
       { label: "Email", url: "mailto:vivek.m.chudasama@gmail.com" },
     ],
 
-    quickFacts: [
-      { text: "8+ years in ServiceNow development across ITSM & CSM." },
-      { text: "Virtual Agent rebuilds, live-agent routing, and CSM/Agent Workspace enablement." },
-      { text: "AI Search + NLU Workbench, multilingual experiences via Localization + Azure Translation." },
-      { text: "Integrations: Microsoft Teams, SAML authentication, CORS, custom URLs, Engagement Messenger." },
-      { text: "Open to relocation/remote roles in Canada, UAE, and Australia." },
-    ],
 
-    about: [
-      "I am a certified ServiceNow Developer focused on delivering high-impact solutions across ITSM and CSM. I specialize in building reliable automations and user-friendly experiences, especially around Virtual Agent, Workspace experiences, and platform integrations.",
-      "I have hands-on expertise in AI Search and NLU Workbench, enabling smarter self-service and improving search relevance. I also implement multilingual experiences using the Localization Framework, Dynamic Translation, and Microsoft Azure Translation services.",
-      "I work effectively in Agile environments, collaborate with global teams, and support end-to-end delivery—requirements, development, testing, demos, deployment, and post-production support.",
-      "<strong>Global readiness:</strong> Open to remote or on-site opportunities in Canada, UAE, and Australia.",
-      "<strong>Education:</strong> M.E. Applied Instrumentation (GTU, Ahmedabad) CGPA 8.07 • B.E. Instrumentation & Control (GTU, Ahmedabad) CPI 7.65",
-    ],
+quickFacts: [
+  { text: "Huge experience in ServiceNow solutions across ITSM, CSM & HRSD with strong platform fundamentals." },
+  {text: "GenAI-ready approach (market demand): strong VA + AI Search foundation, structured knowledge, and automation-first service design." },
+  { text: "Modern self-service focus: Virtual Agent design, topic rebuilds, NLU intent tuning, and seamless live-agent handoff." },
+  { text: "Workspace-first delivery: CSM/Agent Workspace enhancements, routing + assignment strategies, and productivity improvements." },
+  { text: "AI-ready mindset (market trend): AI Search optimization, knowledge-driven deflection, and structured data for better outcomes." },
+  { text: "Automation at scale: Flow Designer + Integration Hub patterns for reducing manual effort and improving turnaround time." },
+  { text: "Integration-heavy experience: Microsoft Teams, Azure Translation, SAML/SSO, CORS, custom endpoints & secure connectivity." },
+  { text: "Global & multilingual enablement: Localization Framework + Dynamic Translation + Azure Translation for consistent user experience." },
+  { text: "Delivery style aligned to current hiring: Agile execution, stakeholder demos, clean documentation, and post-production ownership." },
+  { text: "Open to relocation/remote roles in Canada, UAE, and Australia." }
+],
+
+
+
+about: [
+  `<strong>What I do:</strong> I build scalable ServiceNow solutions across ITSM and CSM with a focus on stability, user experience, and measurable outcomes.`,
+  
+  `<strong>My focus areas:</strong> Virtual Agent experiences, Workspace enhancements (CSM/Agent Workspace), Flow-based automation, and integrations that streamline support.`,
+  
+  `<strong>AI & multilingual:</strong> AI Search and NLU Workbench for smarter self‑service, plus Localization Framework, Dynamic Translation, and Azure Translation for global-ready experiences.`,
+  
+  `<strong>How I deliver:</strong> Agile execution from requirements to release — development, testing, demos, deployment, and post‑production support with global stakeholders.`,
+  
+  `<strong>Global readiness:</strong> Open to remote or on‑site opportunities in Canada, UAE, and Australia.`,
+  
+  `<strong>Education:</strong> M.E. Applied Instrumentation (GTU, Ahmedabad) — CGPA 8.07 • B.E. Instrumentation & Control (GTU, Ahmedabad) — CPI 7.65.`
+],
+
 
     strengths: [
       "Virtual Agent & Conversational Design",
