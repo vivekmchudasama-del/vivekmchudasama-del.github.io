@@ -2,108 +2,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Vivek Chudasama | ServiceNow Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- SEO -->
-  <meta name="description" content="ServiceNow Developer portfolio - ITSM, CSM, HRSD">
-
-  <!-- React CDN -->
-  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
-  <!-- Babel (to write JSX in browser) -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <meta name="description" content="ServiceNow Developer Portfolio - ITSM, CSM, HRSD, Enterprise Automation">
+  <meta name="author" content="Vivek Chudasama">
 
   <style>
+    /* ========================
+       DESIGN TOKENS (LXP STYLE)
+       ======================== */
+    :root {
+      --bg-page: #f4f5f7;
+      --bg-surface: #ffffff;
+      --bg-muted: #eaecef;
+
+      --brand-primary: #0620a8;
+      --brand-accent: #00c6ff;
+
+      --text-primary: #1f2937;
+      --text-secondary: #6b7280;
+
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+
+      --shadow-sm: 0 4px 10px rgba(0,0,0,0.06);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
+
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg-page);
+      color: var(--text-primary);
     }
+
+    /* ========================
+       HEADER
+       ======================== */
     header {
-      padding: 40px;
-      text-align: center;
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      color: #0f172a;
+      background: var(--bg-surface);
+      box-shadow: var(--shadow-sm);
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
+
+    header h3 {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--brand-primary);
+    }
+
+    /* ========================
+       HERO (LXP FEEL)
+       ======================== */
+    .hero {
+      background: linear-gradient(135deg, var(--brand-primary), var(--brand-accent));
+      color: white;
+      padding: 80px 32px;
+      border-radius: var(--radius-lg);
+      margin: 32px;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .hero button {
+      margin-top: 24px;
+      padding: 12px 24px;
+      background: white;
+      color: var(--brand-primary);
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    /* ========================
+       SECTION
+       ======================== */
+    section {
+      padding: 32px;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    /* ========================
+       CARD GRID
+       ======================== */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
     .card {
-      background: #111827;
-      padding: 20px;
-      border-radius: 12px;
-      margin: 20px auto;
-      max-width: 900px;
-      transition: transform 0.3s;
+      background: var(--bg-surface);
+      padding: 24px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s var(--ease),
+                  box-shadow 0.25s var(--ease);
     }
+
     .card:hover {
-      transform: translateY(-5px);
-    }
-    .tag {
-      display: inline-block;
-      padding: 6px 10px;
-      margin: 4px;
-      background: #1f2937;
-      border-radius: 20px;
-      font-size: 14px;
-    }
-  </style>
-</head>
-<body>
-  <div id="root"></div>
-
-  <script type="text/babel">
-    function Header() {
-      return (
-        <header>
-          <h1>Vivek Chudasama</h1>
-          <h3>ServiceNow Developer | ITSM • CSM • HRSD</h3>
-          <p>Gandhinagar, Gujarat</p>
-        </header>
-      );
-    }
-
-    function Skills() {
-      const skills = [
-        "ITSM", "CSM", "HRSD",
-        "Flow Designer", "Script Includes",
-        "REST Integrations", "Automation"
-      ];
-      return (
-        <div className="card">
-          <h2>Skills</h2>
-          {skills.map(skill => (
-            <span className="tag" key={skill}>{skill}</span>
-          ))}
-        </div>
-      );
-    }
-
-    function Projects() {
-      return (
-        <div className="card">
-          <h2>Key Work</h2>
-          <ul>
-            <li>AI‑assisted case automation</li>
-            <li>HRSD onboarding workflows</li>
-            <li>CSM case routing & optimization</li>
-          </ul>
-        </div>
-      );
-    }
-
-    function App() {
-      return (
-        <>
-          <Header />
-          <Skills />
-          <Projects />
-        </>
-      );
-    }
-
-    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
-  </script>
-</body>
-</html>
+      transform: translateY(-6px);
