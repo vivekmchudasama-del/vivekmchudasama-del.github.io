@@ -29,3 +29,238 @@
       </a>
 
       <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+        <ul id="primary-menu" class="menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme" aria-pressed="false">☀️</button>
+        <a class="btn ghost" id="resumeBtn" href="#" download>Download Résumé</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-label="intro">
+      <div class="container hero-wrap">
+        <div class="hero-text">
+          <p class="kicker" id="kickerRole">Senior ServiceNow Developer</p>
+
+          <h1 class="hero-title">
+            Build. Automate. Ship.
+            <span class="hero-title-sub">AI · ITSM · CSM · HRSD · Integrations</span>
+          </h1>
+
+          <p class="hero-sub" id="heroSummary">Loading summary…</p>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#projects">Explore Projects</a>
+            <a class="btn ghost" href="#experience">View Experience</a>
+          </div>
+
+          <div class="hero-stats" aria-label="site stats">
+            <div class="stat">
+              <div class="stat-num" id="yearsExp">—</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+
+            <div class="stat">
+              <div class="stat-num" id="visitorCount">—</div>
+              <div class="stat-label">Visits (device)</div>
+            </div>
+
+            <div class="stat">
+              <div class="stat-num" id="projectCount">—</div>
+              <div class="stat-label">Featured Projects</div>
+            </div>
+          </div>
+
+          <div class="hero-links" id="heroLinks"></div>
+        </div>
+
+        <aside class="hero-card" aria-label="quick profile">
+          <div class="profile">
+            <div class="avatar" aria-hidden="true"><span>VC</span></div>
+            <div>
+              <div class="profile-name" id="profileName">Vivek Chudasama</div>
+              <div class="profile-meta" id="profileMeta">Bangalore · Senior ServiceNow Developer</div>
+            </div>
+          </div>
+
+          <hr class="sep" />
+
+          <ul class="quick-list" id="quickList"></ul>
+
+          <div class="mini-actions">
+            <button class="btn ghost" id="copyEmail">Copy Email</button>
+            <a class="btn primary" href="#contact">Hire / Contact</a>
+          </div>
+
+          <p class="fineprint">
+            This portfolio is data-driven. Edit content inside <code>app.js</code> under <strong>profileData</strong>.
+          </p>
+        </aside>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="orb a"></div>
+          <div class="orb b"></div>
+          <div class="orb c"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>About</h2>
+          <p class="muted">A professional overview—focused on outcomes and impact.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="card prose" id="aboutBody"></div>
+
+          <div class="card">
+            <h3 class="card-title">Core Strengths</h3>
+            <div class="tags" id="strengthTags"></div>
+
+            <h3 class="card-title mt-16">Domains</h3>
+            <div class="tags" id="domainTags"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Experience</h2>
+          <p class="muted">Roles with highlights. Click Details for full information.</p>
+        </div>
+
+        <div class="timeline" id="experienceTimeline"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Projects</h2>
+          <p class="muted">Selected work across AI, ITSM, CSM, HRSD and platform integrations.</p>
+        </div>
+
+        <div class="catalog-controls">
+          <div class="search">
+            <label for="searchInput" class="sr-only">Search projects</label>
+            <input id="searchInput" type="search" placeholder="Search (e.g., Virtual Agent, AI Search, Teams, HRSD)" autocomplete="off" />
+          </div>
+
+          <div class="filters" role="tablist" aria-label="Project filters">
+            <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="chip" data-filter="AI" role="tab">AI</button>
+            <button class="chip" data-filter="ITSM" role="tab">ITSM</button>
+            <button class="chip" data-filter="CSM" role="tab">CSM</button>
+            <button class="chip" data-filter="HRSD" role="tab">HRSD</button>
+            <button class="chip" data-filter="Platform" role="tab">Platform</button>
+            <button class="chip" data-filter="Integrations" role="tab">Integrations</button>
+          </div>
+        </div>
+
+        <div id="projectsGrid" class="grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p class="muted">A snapshot of technical strengths aligned to today’s ServiceNow job market.</p>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Certifications</h2>
+          <p class="muted">Professional certifications and credentials.</p>
+        </div>
+
+        <div class="grid" id="certGrid"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container narrow">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="muted" id="openToLine">Open to remote/relocation roles.</p>
+        </div>
+
+        <div class="card">
+          <div class="contact-row">
+            <div>
+              <div class="label">Email</div>
+              <a id="emailLink" class="value" href="mailto:someone@example.com">someone@example.com</a>
+            </div>
+            <button class="btn ghost" id="copyEmail2">Copy</button>
+          </div>
+
+          <div class="contact-row">
+            <div>
+              <div class="label">Location</div>
+              <div class="value" id="location">—</div>
+            </div>
+            <a class="btn primary" id="mailtoBtn" href="mailto:someone@example.com?subject=ServiceNow%20Opportunity">Email Me</a>
+          </div>
+
+          <p class="fineprint">
+            Visitor count is stored locally per device (browser storage). For real analytics, add a tracking tool later.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-backdrop" data-close></div>
+
+      <div class="modal-card">
+        <button class="icon-btn close" data-close aria-label="Close">✕</button>
+        <h3 id="modalTitle">Details</h3>
+        <div id="modalBody" class="modal-body"></div>
+
+        <div class="modal-actions">
+          <button class="btn primary" data-close>Done</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <small>
+        © <span id="year"></span> Vivek Chudasama ·
+        <button class="link" id="backToTop">Back to top</button>
+      </small>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
